@@ -14,10 +14,11 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'io.rest-assured:rest-assured:4.5.0'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+    testImplementation 'com.codeborne:selenide:6.3.0'
 }
 
 test {
     useJUnitPlatform()
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
 }
